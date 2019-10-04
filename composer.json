@@ -19,5 +19,10 @@
     "files": [
       "registration.php"
     ]
+  },
+  "extra": {
+      "installer-paths": {
+          "app/code/SkiEssentials/ContentIntegration": ["skiessentials/contentintegration"]
+      }
   }
 }
