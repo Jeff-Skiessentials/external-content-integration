@@ -21,8 +21,11 @@
     ]
   },
   "extra": {
-      "installer-paths": {
-          "app/code/SkiEssentials/ContentIntegration": ["skiessentials/contentintegration"]
-      }
+      "map": [
+        [
+          "*",
+          "SkiEssentials/ContentIntegration"
+        ]
+      ]
   }
 }
