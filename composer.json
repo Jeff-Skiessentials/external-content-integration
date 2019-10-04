@@ -1,0 +1,24 @@
+{
+  "name": "skiessentials/content_integration",
+  "description": "SkiEssentials External Content Integration Module - Links external sites to load into a page in Magento",
+  "require": {
+    "php": "~7.0.0"
+  },
+  "type": "magento2-module",
+  "version": "1.0.2",
+  "license": [
+    "OSL-3.0"
+  ],
+  "authors": [
+    {
+      "name": "Jeffrey Siegel",
+      "email": "jeffrey@skiessentials.com",
+      "homepage": "https://wwww.skiessentials.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ]
+  }
+}

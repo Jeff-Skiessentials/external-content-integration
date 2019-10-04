@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Created for SkiEssentials.com - 2019
+ * Written by Jeffrey Siegel
+ * Module loads external content into a page in Magento
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <!-- START: new node -->
+        <add id="SkiEssentials_ContentIntegration::integrated_content"
+             title="Integrated Content"
+             module="SkiEssentials_ContentIntegration"
+             sortOrder="9999"
+             resource="SkiEssentials_ContentIntegration::integratedsite"
+
+             parent="Magento_Backend::content"
+        />
+        <add id="SkiEssentials_ContentIntegration::manage_integrated_sites"
+             title="Manage Integrated Sites"
+             module="SkiEssentials_ContentIntegration"
+             sortOrder="1"
+             resource="SkiEssentials_ContentIntegration::integratedsite"
+
+             parent="SkiEssentials_ContentIntegration::integrated_content"
+             action="contentintegration/sites/index"
+        />
+        <!-- END:   new node -->
+    </menu>
+</config>

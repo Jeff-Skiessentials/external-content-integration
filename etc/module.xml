@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Module loads external content into a page in Magento
+ *
+ * Created for SkiEssentials.com - 2019 - Written by Jeffrey Siegel
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="SkiEssentials_ContentIntegration" setup_version="1.0.3">
+    </module>
+</config>

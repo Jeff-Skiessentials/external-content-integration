@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+    </head>
+    <body>
+        <referenceBlock name="page.main.title" remove="true" />
+        <referenceBlock name="head.additional">
+            <block class="Magento\Framework\View\Element\Template" name="contentintegration_index_head" template="SkiEssentials_ContentIntegration::html/head.phtml">
+                <arguments>
+                    <argument name="content_integration_view_model" xsi:type="object">SkiEssentials\ContentIntegration\Block\Site</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="contentintegration_index_index" template="SkiEssentials_ContentIntegration::index.phtml">
+                <arguments>
+                    <argument name="content_integration_view_model" xsi:type="object">SkiEssentials\ContentIntegration\Block\Site</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Template" name="contentintegration_index_footer" template="SkiEssentials_ContentIntegration::html/foot.phtml">
+                <arguments>
+                    <argument name="content_integration_view_model" xsi:type="object">SkiEssentials\ContentIntegration\Block\Site</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

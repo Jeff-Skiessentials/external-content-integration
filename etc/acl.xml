@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Access Control for Module in Admin
+ *
+ * Created for SkiEssentials.com - 2019 - Written by Jeffrey Siegel
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="SkiEssentials_ContentIntegration::integrated_content"
+                          title="Integrated Content"
+                          sortOrder="100" >
+                    <resource id="SkiEssentials_ContentIntegration::edit_integrated_content"
+                              title="Edit Integrated Sites" sortOrder="1" />
+                </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="SkiEssentials_ContentIntegration::config"
+                                      title="External Content Integration Section" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

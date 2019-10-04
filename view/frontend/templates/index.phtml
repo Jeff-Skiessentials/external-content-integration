@@ -1,0 +1,34 @@
+<?php
+$site = $block->getContentIntegrationViewModel()->getSite();
+/**$test_url = $_SERVER['REQUEST_SCHEME'] . "://setesting.skiessentials.com" . str_replace('?' . $_SERVER['QUERY_STRING'],'',str_replace('/third-thing','',$_SERVER['REQUEST_URI'])) . '?redirect=no' . (empty($_SERVER['QUERY_STRING'])? '' : '&' . $_SERVER['QUERY_STRING']);
+$test_html = file_get_contents($test_url);
+
+libxml_use_internal_errors(true);
+$test_DOM = new DOMDocument();
+$test_DOM->loadHTML($test_html);
+libxml_use_internal_errors(false);
+
+$DOM_path = new DomXpath($test_DOM);  // create a DomXpath object
+
+// Get the title of this ski test page from the DOM as a string
+$test_title = $test_DOM->getElementsByTagName('title')->item(0)->nodeValue;
+
+
+// Get the canonical link of this ski test page from the DOM path as a string
+    $canonical_link_node = $DOM_path->query('/html/head/link[@rel="canonical"]');
+    if ($canonical_link_node->length > 0) $canonical_link = $canonical_link_node->item(0)->C14N();
+
+    $meta_desc_node = $DOM_path->query('//article//div[@class="entry-content"]/p[last()] | //header//div[@class="taxonomy-description"]/p');
+    if ($meta_desc_node->length > 0) $meta_desc = $meta_desc_node->item(0)->nodeValue;
+
+$innerHTML = "";
+$element = $test_DOM->getElementById('page');
+$children  = $element->childNodes;
+
+foreach ($children as $child)
+{
+    $innerHTML .= $element->ownerDocument->saveHTML($child);
+}
+*/
+?>
+<?php echo $site->getContent(); ?>
